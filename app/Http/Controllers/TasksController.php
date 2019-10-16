@@ -64,8 +64,7 @@ class TasksController extends Controller
             'status' => $request->status,
             'content' => $request->content,
             ]);
-
-        return redirect('/');
+            return redirect('/');
     }
 
     /**
@@ -82,7 +81,7 @@ class TasksController extends Controller
             'task' => $task,
         ]);
         }else{
-            return view('welcome');
+            return redirect('/');
         }
 
     }
@@ -101,7 +100,7 @@ class TasksController extends Controller
             'task' => $task,
         ]);
         }else{
-            return view('welcome');
+            return redirect('/');
         }
     }
 
